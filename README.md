@@ -2,9 +2,9 @@
 A RFC3161 compliant http client to request timestamp to a trusted timestamp service provider
 
 ##Project structure
-The project is wirtten in Java and it relies on bouncycastle libraries to encode and decode DER payload with ASN.1 structure. The main class is the TSAClient. The client work as single requestor and it stores digest, request and response for future use.
+The project is wirtten in Java and it relies on bouncycastle libraries to encode and decode DER payload with ASN.1 structure. The main class is the TSAClient. The client work as single requestor and it stores digest, request and response for future use. There is also a TSAResponseViewer usefuel to decode and view response data info.
 
-##TSP Properties
+##tsp-http-client Properties
 The TSAClient read in the classpath:it/luigibifulco/crypto/tsa/tsa.properties to search the tsa.properties file. These are the properties needed:
 
       #the url of timestamp service provider
@@ -30,4 +30,10 @@ The TSAClient read in the classpath:it/luigibifulco/crypto/tsa/tsa.properties to
       
       #the data source to hash with digest algorithm and pass to message imprint
       tsp.dataPath=tsa-context/test.txt
+ 
+##Known issues:
+
+ - some tsp providers fill the response with non standard values such as -5 or -8 or -2, contact your provider for further info about it.
+ - validity check is possibile reusing all files stored during request/response process.
+ - the client was tested only with Aruba PEC provider, but it should works with standard RFC3161 server.
  
