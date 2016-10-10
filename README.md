@@ -30,7 +30,15 @@ The TSAClient read in the classpath:it/luigibifulco/crypto/tsa/tsa.properties to
       
       #the data source to hash with digest algorithm and pass to message imprint
       tsp.dataPath=tsa-context/test.txt
- 
+
+##Usage
+After properties are set you can use the TSAClient in this way:
+
+      TSAClient client = new TSAClient();
+	client.queryTimestamp();
+      
+if all gone well you should see digest file and request and response file in the tsp.workdir directory
+
 ##Known issues:
 
  - some tsp providers fill the response with non standard values such as -5 or -8 or -2, contact your provider for further info about it.
