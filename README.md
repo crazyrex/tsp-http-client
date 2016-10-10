@@ -34,7 +34,7 @@ The TSAClient read in the classpath:it/luigibifulco/crypto/tsa/tsa.properties to
 ##Usage
 After properties are set you can use the TSAClient in this way:
 
-      TSAClient client = new TSAClient();
+        TSAClient client = new TSAClient();
 	client.queryTimestamp();
       
 if all gone well you should see digest file and request and response file in the tsp.workdir directory
