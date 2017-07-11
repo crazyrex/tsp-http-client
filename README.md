@@ -43,5 +43,5 @@ if all gone well you should see digest file and request and response file in the
 
  - some tsp providers fill the response with non standard values such as -5 or -8 or -2, contact your provider for further info about it.
  - validity check is possibile reusing all files stored during request/response process.
- - the client was tested only with Aruba PEC provider, but it should works with standard RFC3161 server.
+ - the client was tested with Aruba PEC provider and Digistamp provider, but it should works with standard RFC3161 server.
  
